@@ -1,0 +1,157 @@
+.footer {
+  text-align: center;
+  background-color: $background-color-dark;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__container {
+  @media (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer-contacts {
+  margin-bottom: 60px;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+  @media (min-width: 1200px) {
+    margin-right: 70px;
+  }
+}
+
+.contacts-list {
+  @media (min-width: 1200px) {
+    text-align: start;
+  }
+}
+
+.footer__contacts-socmedia {
+  margin-bottom: 60px;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+  }
+  @media (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+}
+
+.footer__address {
+  font-style: normal;
+  margin-top: 20px;
+}
+
+.footer-contacts__address {
+  color: $secondary-color;
+}
+
+/* адреса и телефоны */
+.footer-contacts__item {
+  display: block;
+  color: $secondary-color-trnsp;
+  text-decoration: none;
+  margin-top: 9px;
+
+  transition: color $trans-duration $timing-func;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+/* ссылки на соцсети  Присоединяйтесь*/
+
+.footer-socmedia__header,
+.subscribe__header {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $secondary-color;
+}
+
+/* Подпишитесь на рассылку */
+
+.subscribe > h3 {
+  margin-bottom: 20px;
+}
+
+.subscribe > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (min-width: 1200px) {
+    flex-direction: row;
+  }
+}
+
+.subscribe__email {
+  width: 100%;
+  max-width: 450px;
+  height: 50px;
+  padding-left: 16px;
+
+  @include border(rgba(255, 255, 255, 0.3));
+  background-color: $background-color-dark;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.6);
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+  }
+
+  @media (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+  }
+}
+/* кнопка Подписаться */
+
+.subscribe__button {
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 0;
+  padding-left: 28px;
+  padding-right: 28px;
+
+  display: inline-flex;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: $secondary-color;
+  background: $accent-color;
+  border-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: background-color $trans-duration $timing-func;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0;
+  }
+}
+
+.subscribe__icon {
+  margin-left: 10px;
+}
